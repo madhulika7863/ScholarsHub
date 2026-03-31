@@ -1,0 +1,144 @@
+.contact{
+    margin: 100px auto;
+    max-width: 1100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Contact Column */
+
+.contact-col{
+    flex-basis: 48%;
+    color: #444;
+}
+
+/* Heading */
+
+.contact-col h3{
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-col h3 img{
+    width: 32px;
+    margin-left: 10px;
+}
+
+/* Paragraph */
+
+.contact-col p{
+    max-width: 500px;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #cbd5f5;
+}
+
+/* Contact Info List */
+
+.contact-col ul{
+    margin-top: 25px;
+}
+
+.contact-col ul li{
+    display: flex;
+    align-items: center;
+    margin: 18px 0;
+    font-size: 15px;
+    color: #f1f5f9;
+}
+
+.contact-col ul li img{
+    width: 22px;
+    margin-right: 12px;
+}
+
+/* FORM */
+
+.contact form{
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* Inputs */
+
+.contact form input,
+.contact form textarea{
+    display: block;
+    width: 100%;
+    background: #f7f8ff;
+    padding: 14px 16px;
+    border: 1px solid #e3e6ff;
+    outline: none;
+    margin-bottom: 18px;
+    margin-top: 5px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+    resize: none;
+}
+
+/* Input Focus Effect */
+
+.contact form input:focus,
+.contact form textarea:focus{
+    border-color: #4c63ff;
+    box-shadow: 0 0 0 3px rgba(76,99,255,0.1);
+    background: #fff;
+}
+
+/* Submit Button */
+
+.contact form button{
+    background: linear-gradient(135deg,#4c63ff,#6b7bff);
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+
+.contact form button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(76,99,255,0.3);
+}
+
+/* Success Message */
+
+.contact-col span{
+    display: block;
+    margin: 18px 0;
+    color: #28a745;
+    font-weight: 500;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:900px){
+
+    .contact{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contact-col{
+        flex-basis: 100%;
+    }
+
+    .contact form{
+        padding: 25px;
+    }
+
+}

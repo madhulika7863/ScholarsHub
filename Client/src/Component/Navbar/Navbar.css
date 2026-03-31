@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav.container{
+    width: 100%;
+    /* keep your existing container class working */
+    padding: 7px 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(
+        180deg,
+        rgba(7, 18, 45, 0.82) 0%,
+        rgba(7, 18, 45, 0.45) 60%,
+        rgba(7, 18, 45, 0.08) 100%
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.4s ease;
+}
+
+.dark-nav{
+    /* background: rgba(8, 18, 44, 0.92); */
+    background: linear-gradient(180deg, #f8fafc, #e2e8f0);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.22);
+    padding: 14px 8%;
+}
+
+.logo{
+    width: 83px;
+    cursor: pointer;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.18));
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.logo:hover{
+    transform: scale(1.04);
+    filter: drop-shadow(0 8px 18px rgba(0,0,0,0.28));
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+nav ul li{
+    list-style: none;
+    position: relative;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #60a5fa, #22d3ee, #a855f7);
+    transition: width 0.35s ease;
+}
+
+nav ul li a:hover{
+    color: #dbeafe;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* Logout button */
+nav ul button{
+    border: none;
+    outline: none;
+    padding: 11px 22px;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #3b82f6, #06b6d4, #7c3aed);
+    background-size: 200% 200%;
+    box-shadow: 0 10px 24px rgba(59, 130, 246, 0.28);
+
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    animation: gradientShift 5s ease infinite;
+}
+
+nav ul button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(59, 130, 246, 0.38);
+}
+
+nav ul button:active{
+    transform: scale(0.98);
+}
+
+.menu-icon{
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-icon:hover{
+    transform: rotate(90deg) scale(1.05);
+    opacity: 0.9;
+}
+
+/* subtle nav glow */
+nav.container::before{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+    pointer-events: none;
+}
+
+/* animations */
+@keyframes gradientShift{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1000px){
+    nav.container{
+        padding: 16px 6%;
+    }
+
+    .logo{
+        width: 145px;
+    }
+
+    nav ul{
+        gap: 18px;
+    }
+
+    nav ul li a{
+        font-size: 14px;
+    }
+
+    nav ul button{
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 840px){
+    .menu-icon{
+        display: block;
+        z-index: 1100;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 260px;
+        height: 100vh;
+        padding-top: 90px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        background: rgba(8, 18, 44, 0.96);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        box-shadow: -12px 0 35px rgba(0,0,0,0.22);
+
+        transition: right 0.35s ease;
+    }
+
+    nav ul li{
+        width: 100%;
+        padding: 0 28px;
+        margin: 8px 0;
+    }
+
+    nav ul li a{
+        display: inline-block;
+        width: 100%;
+        font-size: 17px;
+        padding: 8px 0;
+    }
+
+    nav ul button{
+        margin: 20px 28px 0;
+        width: calc(100% - 56px);
+        text-align: center;
+    }
+
+    .hide-mobile-menu{
+        right: -260px;
+    }
+}
