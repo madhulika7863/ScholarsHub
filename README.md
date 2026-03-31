@@ -1,4 +1,4 @@
-# ScholarsHub – Education Platform with AI Chatbot
+<img width="1722" height="543" alt="image" src="https://github.com/user-attachments/assets/277f8129-6e8d-406d-8117-132444d611b1" /># ScholarsHub – Education Platform with AI Chatbot
 
 ScholarsHub is a full-stack web application that provides students with access to educational programs, application submission, and an AI-powered chatbot for assistance.
 
@@ -17,6 +17,10 @@ Live URL: [ScholarsHub](https://scholars-hub-livid.vercel.app/)
 
 <img width="1880" height="983" alt="Screenshot 2026-03-23 212851" src="https://github.com/user-attachments/assets/6fc2e8b3-663d-4af8-b0d7-bea15702d429" />
 
+
+<img width="1722" height="543" alt="Screenshot 2026-03-31 203941" src="https://github.com/user-attachments/assets/599155cc-4aed-4654-a678-bda0e41639a9" />
+
+<img width="1403" height="600" alt="Screenshot 2026-03-31 204105" src="https://github.com/user-attachments/assets/ce86849a-179f-47a8-bbe9-e56fa9a26510" />
 
 
 ## GitHub Repository
