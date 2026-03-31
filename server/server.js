@@ -19,7 +19,7 @@ connectDB();
 
 // ✅ CORS FIX (FINAL)
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin:"https://scholars-hub-livid.vercel.app",
   credentials: true,
 }));
 
